@@ -19,7 +19,7 @@ const Navbar = ({ totalItems }) => {
                         Commerce.js
                     </Typography>
                     <div className={classes.grow} />
-                    {
+                    {                        
                         location.pathname === PATH.HOME && (
                             <div className={classes.button}>
                                 <IconButton component={Link} to={PATH.CART} arial-label="Show cart items" color="inherit">
