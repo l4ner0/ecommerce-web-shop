@@ -20,7 +20,7 @@ const Navbar = ({ totalItems }) => {
                     </Typography>
                     <div className={classes.grow} />
                     {
-                        location.pathname === '/' && (
+                        location.pathname === PATH.HOME && (
                             <div className={classes.button}>
                                 <IconButton component={Link} to={PATH.CART} arial-label="Show cart items" color="inherit">
                                     <Badge badgeContent={totalItems} color="secondary">
