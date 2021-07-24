@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@material-ui/core';
 import { useForm, FormProvider } from 'react-hook-form';
 import { commerce } from '../../lib/commerce';
+import { PATH } from '../../constants';
 
 import FormInput from './FormInput';
 
@@ -98,7 +99,7 @@ const AddressForm = ({ checkoutToken, next }) => {
                     </Grid>
                     <br />
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <Button component={Link} to="/cart" variant="outlined">Back to cart</Button>
+                        <Button component={Link} to={PATH.CART} variant="outlined">Back to cart</Button>
                         <Button type="submit" variant="contained" color="primary">Next</Button>
                     </div>
                 </form>

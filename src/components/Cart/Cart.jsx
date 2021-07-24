@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Button, Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-
+import { PATH } from "../../constants";
 import useStyles from './styles';
 import CartItem from './CartItem/CartItem';
 
@@ -10,7 +10,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     const EmptyCard = () => (
         <Typography variant="subtitle1">
             You have no items in your shopping cart,
-            <Link to="/" className={classes.link} > start adding some!</Link>
+            <Link to={PATH.HOME} className={classes.link} > start adding some!</Link>
         </Typography>
     );
     const FilledCart = () => (
@@ -28,7 +28,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
                 </Typography>
                 <div>
                     <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty Cart</Button>
-                    <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Checkout</Button>
+                    <Button component={Link} to={PATH.CHECKOUT} className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Checkout</Button>
                 </div>
             </div>
         </>

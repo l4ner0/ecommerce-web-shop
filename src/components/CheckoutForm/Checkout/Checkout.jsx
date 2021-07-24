@@ -15,6 +15,7 @@ import { commerce } from '../../../lib/commerce';
 import useStyles from './styles';
 import AddressForm from '../AddressForm';
 import PaymentForm from '../PaymentForm';
+import { PATH } from '../../../constants';
 
 const steps = ['Shipping address', 'Payment details'];
 
@@ -52,7 +53,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
                 <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
             </div>
             <br />
-            <Button component={Link} variant="outlined" to="/" type="button">Back to Home</Button>
+            <Button component={Link} variant="outlined" to={PATH.HOME} type="button">Back to Home</Button>
         </>
     ) : (
         <div className={classes.spinner}>
@@ -64,7 +65,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         <>
             <Typography variant="h5">Error: {error}</Typography>
             <br />
-            <Button component={Link} variant="outlined" to="/" type="button">Back to Home</Button>
+            <Button component={Link} variant="outlined" to={PATH.HOME} type="button">Back to Home</Button>
         </>
     }
 
